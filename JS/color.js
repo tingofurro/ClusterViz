@@ -15,7 +15,7 @@ function col(key) {
 }
 function edgeCol(key) {
 	if(!edgeColorMap[key]) {
-		edgeColorMap[key] = tinycolor(col(key)).desaturate(20).setAlpha(0.2);
+		edgeColorMap[key] = tinycolor(col(key)).desaturate(20).setAlpha(0.4);
 	}
 	return edgeColorMap[key];
 }

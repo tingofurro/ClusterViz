@@ -7,32 +7,32 @@ body {
 }
 canvas {
 	position: absolute; top: 0px;
+	left: 300px;
 }
-#logo1 {
-    text-shadow: 1px 1px 0px #a37cc6, -1px -1px 0px #a37cc6, 1px -1px 0px #a37cc6, -1px 1px 0px #a37cc6;	
-	position: absolute; bottom: 0px; right: 30px;
-    font-weight: 900; font-size: 90px;
-    stroke: #a37cc6; color: #ece4f3;
-}
-#keywords {
-	position: absolute; top: 0px; left: 0px;
-	width: 100%; height: 100%;
-}
-.keyword {
-    font-family: 'Roboto', sans-serif;
+#options {
 	position: absolute;
+	background: rgba(0,0,0,0.1);
+	border-right: 1px solid black;
+	width: 300px; height: 100%;
+	z-index: 2;
 	text-align: center;
-	transform: translateX(-50%);
+	float: left;
 }
-
-/*Notification style*/
-.sourceImg {
-	float: left; height: 45px;
-	margin-right: 15px;
+.title {
+	text-align: center;
+	font-size: 24px;
+	line-height: 40px;
 }
-.dblClickInfo {
-	text-decoration: underline;
-	font-weight: 400;
-	font-size: 11px;
-	color: #707070;
+.hyperparameters {
+	display: none;
+}
+#loading {
+	position: absolute;
+	left: 200px;
+	margin-top: -50px;
+}
+input[type='range'], .slideValue {
+	vertical-align: middle;
+	font-size: 20px;
+	font-weight: 700;
 }

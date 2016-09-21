@@ -4,13 +4,37 @@
 	<link rel="stylesheet" href="style.css" media="screen" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script src="http://d3js.org/d3.v3.js"></script>
-	<script type="text/javascript" src="JS/lib/noty.js"></script>
 	<script type="text/javascript" src="JS/lib/tinyColor.js"></script>
+
+	<script type="text/javascript" src="JS/canvas.js"></script>
 	<script type="text/javascript" src="JS/smartGraph.js"></script>
 	<script type="text/javascript" src="JS/loadGraph.js"></script>
 	<script type="text/javascript" src="JS/color.js"></script>
 </head>
 <body onload="start();">
 	<canvas id="canvas"></canvas>
+	<img src="images/loading.gif" id="loading">
+	<div id="options">
+		<div class="title">
+			Dataset
+		</div>
+		<div class="title">
+			Model options
+		</div>
+			<select id="model" name="model" onchange="changeModel();">
+				<option value="kw">K-keywords graph + Louvain</option>
+				<option value="tfidf">Tf-idf epsilon graph + Louvain</option>
+			</select>
+		<div class="title">
+			Hyperparameters options
+		</div>
+		<div class="hyperparameters" id="hyperparameters_kw">
+			<input type="range" min="1" max="7" id="k" name="k" step="1" onchange="changeHyper();" value="2"> <span id="kValue" class="slideValue">2</span>
+
+		</div>
+		<div class="hyperparameters" id="hyperparameters_tfidf">
+			<input type="range" min="0.15" max="0.9" id="eps" name="eps" step="0.05" onchange="changeHyper();" value="0.3"> <span id="epsValue" class="slideValue">0.3</span>
+		</div>
+	</div>
 </body>
 </html>
